@@ -4,7 +4,7 @@ This is a simple JS application reusable components that can be use for front-en
 THE USAGE 
 
 #ajax(OBJECT)
-	JX_APP.ajax({
+	ez.ajax({
 		url: <REQUEST URL API>
 		method: <GET|POST>,
 		dataRequest: <JSON|FORMDATA - OPTIONAL> 
@@ -14,11 +14,11 @@ THE USAGE
 
 
 #htmlMapper(JSON OBJECT)
-	JX_APP.htmlMapper(<JSON OBJECT>);
+	ez.htmlMapper(<JSON OBJECT>);
 
 
 #xmlParser(OBJECT)
-	JX_APP.xmlParser({
+	ez.xmlParser({
 		document: <XML DOCUMENT>,
 		nodes: <TARGETED ELEMENTS>
 		complete: function(res){
@@ -29,19 +29,19 @@ THE USAGE
 
 
 #jsonScanner(JSON_OBJECT, CALLBACK_FUNCTION)
-	JX_APP.jsonScanner(<JSON>, function(res){
+	ez.jsonScanner(<JSON>, function(res){
 		var result = res;
 		// the callback function will normalize the JSON tree in one dimension
 	});
 
 
 #addEvent(OBJECT_ELEMENT, EVENT_TYPE, CALLBACK)
-	JX_APP.addEvent(element, 'click', function(e){
+	ez.addEvent(element, 'click', function(e){
 		//do something abou the element
 	});
 
 
 #formToJson
-	<form onsubmit="return JX_APP.formToJSON(this)">
+	<form onsubmit="return ez.formToJSON(this)">
 		....
 	</form>

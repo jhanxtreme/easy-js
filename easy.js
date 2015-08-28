@@ -3,7 +3,10 @@ Author: Jhan Mateo
 Email: jhanxtreme@gmail.com
 Github: https://github.com/jhanxtreme
 Description:
+	!!! BETA MODE
 	Mini Javascript Application that contains reusable components:
+
+	USAGE 
 
 	****** AJAX ******
 	- ajax(OBJECT)
@@ -406,6 +409,9 @@ JX_APP.prototype.addEvent = function(obj, type, cb){
 }
 
 
+/************************************************
+	FORM TO JSON / OBJECT
+************************************************/
 JX_APP.prototype.formToJSON = function(form){
 
 	if('form'!==form.nodeName.toLowerCase() && 1!==form.nodeType){
@@ -525,5 +531,31 @@ JX_APP.prototype.formToJSON = function(form){
 	return false;
 }
 
+/************************************************
+	DOMINATOR
+************************************************/
+JX_APP.prototype.dom = function(){
+	var elems = elems || [];
+	function _getDOM(qry){
+		if(document.getElementById(qry)!==null){
+			return document.getElementById(qry);
+		}else if(document.getElementsByClassName(qry).length>0){
+			return document.getElementsByClassName(qry);
+		}else if(document.querySelectorAll(qry).length>0){
+			return document.querySelectorAll(qry);
+		}else if(document.querySelector(qry)!==undefined){
+			return document.querySelector(qry);
+		}else{
+			return null;
+		}
+	}
+	for(var i=0, n=arguments.length; i<n; i++){
+		elems.push(_getDOM(arguments[i]));
+	}
+	return elems;
+}
+
+
+
 function JX_APP(){}
-var JX_APP = new JX_APP();
+var ez = new JX_APP();
