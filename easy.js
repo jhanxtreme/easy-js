@@ -10,7 +10,7 @@ Description:
 
 	****** AJAX ******
 	- ajax(OBJECT)
-		JX_APP.ajax({
+		ez.ajax({
 			url: <REQUEST URL API>
 			method: <GET|POST>,
 			dataRequest: <JSON|FORMDATA - OPTIONAL> 
@@ -21,13 +21,13 @@ Description:
 
 	****** HTMLMAPPER ******
 	- htmlMapper(JSON OBJECT)
-		JX_APP.htmlMapper(<JSON OBJECT>);
+		ez.htmlMapper(<JSON OBJECT>);
 
 
 	****** XMLPARSER ******
 	- xmlParser(OBJECT)
 
-		JX_APP.xmlParser({
+		ez.xmlParser({
 			document: <XML DOCUMENT>,
 			nodes: <TARGETED ELEMENTS>
 			complete: function(res){
@@ -40,7 +40,7 @@ Description:
 	****** JSON SCANNER ******
 	- jsonScanner(<JSON OBJECT>, <CALLBACK FUNCTION>)
 
-		JX_APP.jsonScanner(<JSON>, function(res){
+		ez.jsonScanner(<JSON>, function(res){
 			var result = res;
 			// the callback function will normalize the JSON tree in one dimension
 		});
@@ -49,7 +49,7 @@ Description:
 	****** ADDEVENT ******
 	- addEvent(<OBJECT ELEMENT>, <EVENT TYPE>, <CALLBACK>)
 
-		JX_APP.addEvent(element, 'click', function(e){
+		ez.addEvent(element, 'click', function(e){
 			//do something abou the element
 		});
 
@@ -57,9 +57,14 @@ Description:
 	****** FROM TO JSON ******
 	- formToJson
 		
-		<form onsubmit="return JX_APP.formToJSON(this)">
+		<form onsubmit="return ez.formToJSON(this)">
 			....
 		</form>
+
+	****** DOMINATOR ******
+	-dom(MULTIPLE_DOMS)
+	ez.dom('#elem1', '.elem2', 'elem3', '.elem4 #elem5')
+
 
 
 */
