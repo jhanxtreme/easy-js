@@ -45,3 +45,6 @@ THE USAGE
 	<form onsubmit="return ez.formToJSON(this)">
 		....
 	</form>
+
+#dom(MULTIPLE_DOMS)
+	ez.dom('#elem1', '.elem2', 'elem3', '.elem4 #elem5')
